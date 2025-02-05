@@ -1,0 +1,52 @@
+/* .body-home {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+} */
+
+body {
+  background: url("../img/image_background2.png") center fixed;
+  filter: blur(0.5px);
+  overflow: hidden;
+}
+
+
+.botao-enter{
+  background: transparent;
+  display: block;
+  width: 100px;
+  height: 38px;
+  border: 1px solid #fffe;
+
+  filter: blur(0.5px);
+  font-family: "Times New Roman", Times;
+}
+
+.txt-small {
+  font-family: "raleway", sans-serif;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.logo-container{
+  margin-bottom: 250px;
+}
+
+
+/* STYLE #2 */
+/* .body-home {
+    background: url("../img/image_background.png") center center fixed;
+    
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  } */

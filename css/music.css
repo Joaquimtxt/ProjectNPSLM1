@@ -1,0 +1,68 @@
+html {
+    position: relative;
+    min-height: 100%; 
+}
+
+body {
+    margin-bottom: 250px;
+}
+
+.nav-link:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+.custom-icon {
+    width: 25px; /* Ajuste o tamanho conforme necessário */
+    height: 25px;
+    transition: transform 30ms ease;
+}
+
+    .custom-icon:hover {
+        transform: scale(1.2); /* Aumenta o ícone para dar um efeito de destaque */
+    }
+
+    .custom-icon::before {
+
+        background-color: rgba(128, 128, 128, 0.3); /* Cor cinza com transparência */
+        border-radius: 50%;
+        transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+        z-index: -1; /* Coloca o círculo atrás do ícone */
+    }
+
+    .custom-icon:hover::before {
+        width: 50px; /* Ajuste o tamanho do círculo conforme necessário */
+        height: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #main-video{
+        object-fit: cover;
+        width: 100%;
+        height: 330px;
+    }
+    /*Hover da navbar*/
+.custom-link {
+    position: relative;
+    padding-bottom: 5px; /* Ajuste conforme necessário */
+}
+
+    .custom-link.active::after {
+        content: ' ';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px; /* Espessura da barra */
+        background-color: #0099ff; /* Cor da barra*/
+    }
+    
+
+    /*Alterando as imagens dos álbuns para ficarem em um mesmo tamanho*/
+    .custom-width
+    {
+        width: 300px;
+        height: 300px;
+    }
+
+  
