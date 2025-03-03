@@ -7,6 +7,8 @@
   overflow: hidden;
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 body {
   background: url("../img/image_background2.png") center fixed;
   filter: blur(0.5px);
