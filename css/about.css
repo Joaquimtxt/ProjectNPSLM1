@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+@keyframes breathe {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+      transform: scale(1);
+    }
+    50% {
+      text-shadow: 0 0 25px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(119, 69, 236, 0.6), 0 0 60px rgba(119, 69, 236, 0.4);
+      transform: scale(1.03);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+      transform: scale(1);
+    }
+  }
+
+@keyframes breathe2 {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 1),
+            0 0 50px rgba(255, 255, 255, 0.8), 0 0 70px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    }
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-x:hidden;
+}
+header .nav-link {
+  font-family: "Audiowide", sans-serif;
+  color: #7745ec;
+}
+body {
+  margin-bottom: 100px;
+  background: linear-gradient(to top left, #f472b6, #f43f5e, #dc2626);
+  /* background: linear-gradient(to bottom, #818cf8, #6366f1, #4f46e5); */
+  /* background: linear-gradient(to top right, #0891b2, #1d4ed8, #3730a3); */
+  /* background: linear-gradient(to top right, #1d4ed8, #3730a3, #4c0d2e); */
+  /* background: linear-gradient(to bottom, #06b6d4, #2563eb, #6366f1); */
+  /* background: radial-gradient(ellipse at left, #6366f1, #a5b4fc, #e0e7ff); */
+  /* background: linear-gradient(to right, #374151, #f43f5e, #fb923c); */
+  animation: gradient 15s ease infinite;
+}
+
+.nav-link:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+.custom-icon {
+  width: 25px; /* Ajuste o tamanho conforme necessário */
+  height: 25px;
+  transition: transform 30ms ease;
+}
+
+.custom-icon:hover {
+  transform: scale(1.2); /* Aumenta o ícone para dar um efeito de destaque */
+}
+
+.custom-icon::before {
+  background-color: rgba(128, 128, 128, 0.3); /* Cor cinza com transparência */
+  border-radius: 50%;
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+  z-index: -1; /* Coloca o círculo atrás do ícone */
+}
+
+.custom-icon:hover::before {
+  width: 50px; /* Ajuste o tamanho do círculo conforme necessário */
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#main-video {
+  object-fit: cover;
+  width: 100%;
+  height: 330px;
+}
+/*Hover da navbar*/
+.custom-link {
+  position: relative;
+  padding-bottom: 5px; /* Ajuste conforme necessário */
+}
+
+.custom-link.active::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*Made by R0sy and Pa1n*/
+  width: 100%;
+  height: 3px; /* Espessura da barra */
+  background-color: #7745ec; /* Cor da barra*/
+}
+
+
+
+#about-title {
+  color: whitesmoke;
+  font-family: "Krona One";
+  filter: blur(1.5px);
+  margin-bottom: 70px;
+}
+
+.contact-text{
+  font-family: "Luxurious Roman";
+  font-size: 20px;
+  color: white;
+}
+.breathe{
+    animation: breathe 4s infinite ease-in-out;
+  
+}
+.breathe2{
+    animation: breathe2 4s infinite ease-in-out;
+  
+}
+.bg-about{
+    background: rgba(47, 44, 44, 0.6);
+}

@@ -7,22 +7,58 @@
   overflow: hidden;
 } */
 
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
 body {
   background: url("../img/image_background2.png") center fixed;
   filter: blur(0.5px);
   overflow: hidden;
 }
 
-
-.botao-enter{
+.botao-enter {
   background: transparent;
   display: block;
   width: 100px;
   height: 38px;
-  border: 1px solid #fffe;
-
-  filter: blur(0.5px);
+  border: 2px solid #fffe;
+  filter: blur(0.2px);
   font-family: "Times New Roman", Times;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  animation: breathe 4s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.botao-enter:hover {
+  background: rgb(236, 229, 229, 0.8);
+  color: white;
+  animation: none;
+  box-shadow: 0 0 15px rgba(119, 69, 236, 0.8);
+  transform: scale(1.07);
+  animation: breathe 4s infinite ease-in-out;
+}
+
+@keyframes breathe {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8),
+      0 0 40px rgba(119, 69, 236, 0.6), 0 0 60px rgba(119, 69, 236, 0.4);
+    transform: scale(1.06);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    transform: scale(1);
+  }
+}
+
+/* You might also want to adjust the spacing */
+.logo-container {
+  margin-bottom: 180px; /* Adjusted to compensate for the moved button */
 }
 
 .txt-small {
@@ -33,11 +69,9 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-
-.logo-container{
+.logo-container {
   margin-bottom: 250px;
 }
-
 
 /* STYLE #2 */
 /* .body-home {

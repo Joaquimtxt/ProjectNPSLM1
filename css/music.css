@@ -1,68 +1,177 @@
-html {
-    position: relative;
-    min-height: 100%; 
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+@keyframes breathe {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.8),
+      0 0 40px rgba(119, 69, 236, 0.6), 0 0 60px rgba(119, 69, 236, 0.4);
+    transform: scale(1.03);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    transform: scale(1);
+  }
 }
 
+
+
+@keyframes breathe2 {
+  0% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 1),
+          0 0 50px rgba(255, 255, 255, 0.8), 0 0 70px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.breathe{
+  animation: breathe 4s infinite ease-in-out;
+
+}
+.breathe2{
+  animation: breathe2 4s infinite ease-in-out;
+
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-x:hidden;
+}
+header .nav-link {
+  font-family: "Audiowide", sans-serif;
+  color: #7745ec;
+}
 body {
-    margin-bottom: 250px;
+  margin-bottom: 100px;
+  background: linear-gradient(to top left, #f472b6, #f43f5e, #dc2626);
+  /* background: linear-gradient(to bottom, #818cf8, #6366f1, #4f46e5); */
+  /* background: linear-gradient(to top right, #0891b2, #1d4ed8, #3730a3); */
+  /* background: linear-gradient(to top right, #1d4ed8, #3730a3, #4c0d2e); */
+  /* background: linear-gradient(to bottom, #06b6d4, #2563eb, #6366f1); */
+  /* background: radial-gradient(ellipse at left, #6366f1, #a5b4fc, #e0e7ff); */
+  /* background: linear-gradient(to right, #374151, #f43f5e, #fb923c); */
+  animation: gradient 15s ease infinite;
 }
 
 .nav-link:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 .custom-icon {
-    width: 25px; /* Ajuste o tamanho conforme necessário */
-    height: 25px;
-    transition: transform 30ms ease;
+  width: 25px; /* Ajuste o tamanho conforme necessário */
+  height: 25px;
+  transition: transform 30ms ease;
 }
 
-    .custom-icon:hover {
-        transform: scale(1.2); /* Aumenta o ícone para dar um efeito de destaque */
-    }
+.custom-icon:hover {
+  transform: scale(1.2); /* Aumenta o ícone para dar um efeito de destaque */
+}
 
-    .custom-icon::before {
+.custom-icon::before {
+  background-color: rgba(128, 128, 128, 0.3); /* Cor cinza com transparência */
+  border-radius: 50%;
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+  z-index: -1; /* Coloca o círculo atrás do ícone */
+}
 
-        background-color: rgba(128, 128, 128, 0.3); /* Cor cinza com transparência */
-        border-radius: 50%;
-        transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
-        z-index: -1; /* Coloca o círculo atrás do ícone */
-    }
+.custom-icon:hover::before {
+  width: 50px; /* Ajuste o tamanho do círculo conforme necessário */
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-    .custom-icon:hover::before {
-        width: 50px; /* Ajuste o tamanho do círculo conforme necessário */
-        height: 50px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    #main-video{
-        object-fit: cover;
-        width: 100%;
-        height: 330px;
-    }
-    /*Hover da navbar*/
+#main-video {
+  object-fit: cover;
+  width: 100%;
+  height: 330px;
+}
+/*Hover da navbar*/
 .custom-link {
-    position: relative;
-    padding-bottom: 5px; /* Ajuste conforme necessário */
+  position: relative;
+  padding-bottom: 5px; /* Ajuste conforme necessário */
 }
 
-    .custom-link.active::after {
-        content: ' ';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 3px; /* Espessura da barra */
-        background-color: #0099ff; /* Cor da barra*/
-    }
-    
+.custom-link.active::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*Made by R0sy and Pa1n*/
+  width: 100%;
+  height: 3px; /* Espessura da barra */
+  background-color: #7745ec; /* Cor da barra*/
+}
 
-    /*Alterando as imagens dos álbuns para ficarem em um mesmo tamanho*/
-    .custom-width
-    {
-        width: 300px;
-        height: 300px;
-    }
+/*Alterando as imagens dos álbuns para ficarem em um mesmo tamanho*/
+.custom-width {
+  width: 300px;
+  height: 300px;
+}
 
-  
+.card {
+  width: 320px;
+  background-color: transparent;
+  border: 2px solid white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.faceit-title {
+  font-family: "Times New Roman", Times;
+  font-size: 30px;
+}
+
+.auckland-title {
+  font-size: 30px;
+}
+
+.newgen-title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.btn-enter {
+}
+
+#album-title {
+  color: whitesmoke;
+  font-family: "Krona One";
+  filter: blur(1.5px);
+  margin-bottom: 70px;
+}
+
+.bg-modal-newgen{
+  background: linear-gradient(to right, #dfe2fe, #b1cbfa, #8e98f5);background: linear-gradient(to right, #dfe2fe, #b1cbfa, #8e98f5);
+
+}
+.bg-modal-auckland{
+  background: linear-gradient(to bottom left, #f7f5b2, #bad4f9, #5e89ef);
+
+}
+.bg-modal-faceit{
+  background: radial-gradient(ellipse at left, #35013f, #561050, #951556);
+
+}
+
+.contact-text{
+  font-family: "Luxurious Roman";
+  font-size: 20px;
+  color: white;
+}
